@@ -39,4 +39,16 @@ public class FizzBuzzTest {
 
         assertThat(result).isEqualTo("FizzBuzz");
     }
+
+    @Test
+    void given_one_hundred_numbers_return_equivalent(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        for (int number = 1; number <= 100; number++) {
+
+            String result = fizzBuzz.checkEquivalent(number);
+
+            assertThat(result).isEqualTo("FizzBuzz");
+        }
+    }
 }
