@@ -9,6 +9,7 @@ public class FizzBuzzTest {
     void return_given_list_numbers(){
         List<String> givenNumbers = List.of("1", "2");
         FizzBuzz fizzBuzz = new FizzBuzz();
-        assertThat(fizzBuzz.calculate()).isEqualTo(givenNumbers);
+
+        assertThat(fizzBuzz.calculate(givenNumbers)).isEqualTo(givenNumbers);
     }
 }
