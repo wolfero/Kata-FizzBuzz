@@ -48,7 +48,21 @@ public class FizzBuzzTest {
 
             String result = fizzBuzz.checkEquivalent(number);
 
-            assertThat(result).isEqualTo("FizzBuzz");
+            assertThat(result).isEqualTo(equalizingText(number));
         }
+    }
+
+    private String equalizingText(int number){
+        final String Fizz="Fizz";
+        final String Buzz="Buzz";
+        final String FizBuzz="FizzBuzz";
+        boolean isFizz = number % 3 == 0;
+        boolean isBuzz = number % 5 == 0;
+        boolean isFizzBuzz = isFizz && isBuzz;
+
+        if (isFizzBuzz) return FizBuzz;
+        if(isFizz)return Fizz;
+        if(isBuzz)return Buzz;
+        return Integer.toString(number);
     }
 }
