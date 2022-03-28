@@ -41,4 +41,15 @@ public class FizzBuzzTest {
 
         assertThat(fizzBuzz.calculate(givenNumbers)).isEqualTo(expectedNumbers);
     }
+
+    @Test
+    void given_number_of_repetition() {
+        List<String> givenNumbers = List.of("1", "2", "3", "4", "5", "6", "7", "15");
+        List<String> expectedNumbers = List.of("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "FizzBuzz");
+
+        List<String> result = fizzBuzz.calculate(givenNumbers);
+        String printedOutput = fizzBuzz.printInConsole(result);
+
+        assertThat(printedOutput).isEqualTo(expectedNumbers);
+    }
 }

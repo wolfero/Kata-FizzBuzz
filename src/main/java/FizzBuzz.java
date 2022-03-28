@@ -1,3 +1,5 @@
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.List;
 
 public class FizzBuzz {
@@ -10,9 +12,18 @@ public class FizzBuzz {
         boolean isBuzz = Integer.parseInt(text) % 5 == 0;
         boolean isFizzBuzz = isFizz && isBuzz;
 
-        if(isFizzBuzz) return"FizzBuzz";
+        if (isFizzBuzz) return "FizzBuzz";
         if (isFizz) return "Fizz";
         if (isBuzz) return "Buzz";
         return text;
+    }
+
+    public String printInConsole(List<String> numbers) {
+        final var result = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(result));
+        for (var number : numbers) {
+            System.out.print(number);
+        }
+        return result.toString();
     }
 }
