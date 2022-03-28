@@ -14,14 +14,6 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void return_given_list_numbers() {
-        fizzBuzz = new FizzBuzz();
-        List<String> givenNumbers = List.of("1", "2");
-
-        assertThat(fizzBuzz.calculate(givenNumbers)).isEqualTo(givenNumbers);
-    }
-
-    @Test
     void given_list_numbers_get_fizz_on_multiples_of_three() {
         fizzBuzz = new FizzBuzz();
         List<String> givenNumbers = List.of("1", "2", "3");
@@ -43,8 +35,8 @@ public class FizzBuzzTest {
     @Test
     void given_list_numbers_get_fizzbuzz_on_multiples_of_three_and_five() {
         fizzBuzz = new FizzBuzz();
-        List<String> givenNumbers = List.of("1", "2","3", "5","15");
-        List<String> expectedNumbers = List.of("1", "2","Fizz", "Buzz", "FizzBuzz");
+        List<String> givenNumbers = List.of("1", "2", "3", "5", "15");
+        List<String> expectedNumbers = List.of("1", "2", "Fizz", "Buzz", "FizzBuzz");
 
 
         assertThat(fizzBuzz.calculate(givenNumbers)).isEqualTo(expectedNumbers);
