@@ -1,5 +1,5 @@
 public class FizzBuzz {
     public String checkEquivalent(int givenNumber) {
-        return "";
+        return Integer.toString(givenNumber) ;
     }
 }
