@@ -12,4 +12,12 @@ public class FizzBuzzTest {
 
         assertThat(fizzBuzz.calculate(givenNumbers)).isEqualTo(givenNumbers);
     }
+
+    @Test
+    void given_list_numbers_get_fizz_on_multiples_of_three(){
+        List<String> givenNumbers = List.of("1", "2","3");
+        List<String> expectedNumbers = List.of("1", "2","Fizz");
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertThat(fizzBuzz.calculate(givenNumbers)).isEqualTo(expectedNumbers);
+    }
 }
