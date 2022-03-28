@@ -20,4 +20,14 @@ public class FizzBuzzTest {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertThat(fizzBuzz.calculate(givenNumbers)).isEqualTo(expectedNumbers);
     }
+
+    @Test
+    void given_list_numbers_get_buzz_on_multiples_of_five() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        List<String> givenNumbers = List.of("1", "2", "5");
+
+        List<String> expectedNumbers = List.of("1", "2", "Buzz");
+
+        assertThat(fizzBuzz.calculate(givenNumbers)).isEqualTo(expectedNumbers);
+    }
 }
