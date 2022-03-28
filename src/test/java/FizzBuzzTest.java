@@ -1,68 +1,79 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class FizzBuzzTest {
+    FizzBuzz fizzBuzz;
+
+    @BeforeEach
+    void setUp() {
+        fizzBuzz = new FizzBuzz();
+    }
 
     @Test
     void given_number_return_number_in_string_format() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        fizzBuzz = new FizzBuzz();
+        int givenNumber = 1;
 
-        String result = fizzBuzz.checkEquivalent(1);
+        String result = fizzBuzz.checkEquivalent(givenNumber);
 
-        assertThat(result).isEqualTo("1");
+        assertThat(result).isEqualTo(equalizingText(givenNumber));
     }
 
     @Test
     void given_multiple_of_three_return_fizz() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        fizzBuzz = new FizzBuzz();
+        int givenNumber = 3;
 
-        String result = fizzBuzz.checkEquivalent(3);
+        String result = fizzBuzz.checkEquivalent(givenNumber);
 
-        assertThat(result).isEqualTo("Fizz");
+        assertThat(result).isEqualTo(equalizingText(givenNumber));
     }
 
     @Test
     void given_multiple_of_five_return_buzz() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        fizzBuzz = new FizzBuzz();
+        int givenNumber = 5;
 
-        String result = fizzBuzz.checkEquivalent(5);
+        String result = fizzBuzz.checkEquivalent(givenNumber);
 
-        assertThat(result).isEqualTo("Buzz");
+        assertThat(result).isEqualTo(equalizingText(givenNumber));
     }
 
     @Test
     void given_multiple_of_three_and_five_return_fizzbuzz() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        fizzBuzz = new FizzBuzz();
+        int givenNumber = 15;
 
-        String result = fizzBuzz.checkEquivalent(15);
+        String result = fizzBuzz.checkEquivalent(givenNumber);
 
-        assertThat(result).isEqualTo("FizzBuzz");
+        assertThat(result).isEqualTo(equalizingText(givenNumber));
     }
 
     @Test
-    void given_one_hundred_numbers_return_equivalent(){
-        FizzBuzz fizzBuzz = new FizzBuzz();
+    void given_one_hundred_numbers_return_equivalent() {
+        fizzBuzz = new FizzBuzz();
 
-        for (int number = 1; number <= 100; number++) {
+        for (int givenNumber = 1; givenNumber <= 100; givenNumber++) {
 
-            String result = fizzBuzz.checkEquivalent(number);
+            String result = fizzBuzz.checkEquivalent(givenNumber);
 
-            assertThat(result).isEqualTo(equalizingText(number));
+            assertThat(result).isEqualTo(equalizingText(givenNumber));
         }
     }
 
-    private String equalizingText(int number){
-        final String Fizz="Fizz";
-        final String Buzz="Buzz";
-        final String FizBuzz="FizzBuzz";
+    private String equalizingText(int number) {
+        final String Fizz = "Fizz";
+        final String Buzz = "Buzz";
+        final String FizBuzz = "FizzBuzz";
         boolean isFizz = number % 3 == 0;
         boolean isBuzz = number % 5 == 0;
         boolean isFizzBuzz = isFizz && isBuzz;
 
         if (isFizzBuzz) return FizBuzz;
-        if(isFizz)return Fizz;
-        if(isBuzz)return Buzz;
+        if (isFizz) return Fizz;
+        if (isBuzz) return Buzz;
         return Integer.toString(number);
     }
 }
