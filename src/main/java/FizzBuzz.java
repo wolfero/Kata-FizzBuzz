@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class FizzBuzz {
-    public List<String> calculate(List<String> givenNumbers){
+    public List<String> calculate(List<String> givenNumbers) {
         return givenNumbers.stream().map(this::fizzBuzzCheck).toList();
     }
 
