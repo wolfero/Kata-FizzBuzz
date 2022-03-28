@@ -8,7 +8,9 @@ public class FizzBuzz {
     private String fizzBuzzCheck(String text) {
         boolean isFizz = Integer.parseInt(text) % 3 == 0;
         boolean isBuzz = Integer.parseInt(text) % 5 == 0;
+        boolean isFizzBuzz = isFizz && isBuzz;
 
+        if(isFizzBuzz) return"FizzBuzz";
         if (isFizz) return "Fizz";
         if (isBuzz) return "Buzz";
         return text;
