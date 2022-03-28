@@ -19,7 +19,9 @@ public class FizzBuzzTest {
         List<String> givenNumbers = List.of("1", "2", "3");
         List<String> expectedNumbers = List.of("1", "2", "Fizz");
 
-        assertThat(fizzBuzz.calculate(givenNumbers)).isEqualTo(expectedNumbers);
+        List<String> result = fizzBuzz.calculate(givenNumbers);
+
+        assertThat(result).isEqualTo(expectedNumbers);
     }
 
     @Test
@@ -29,7 +31,9 @@ public class FizzBuzzTest {
 
         List<String> expectedNumbers = List.of("1", "2", "Buzz");
 
-        assertThat(fizzBuzz.calculate(givenNumbers)).isEqualTo(expectedNumbers);
+        List<String> result = fizzBuzz.calculate(givenNumbers);
+
+        assertThat(result).isEqualTo(expectedNumbers);
     }
 
     @Test
@@ -39,7 +43,9 @@ public class FizzBuzzTest {
         List<String> expectedNumbers = List.of("1", "2", "Fizz", "Buzz", "FizzBuzz");
 
 
-        assertThat(fizzBuzz.calculate(givenNumbers)).isEqualTo(expectedNumbers);
+        List<String> result = fizzBuzz.calculate(givenNumbers);
+
+        assertThat(result).isEqualTo(expectedNumbers);
     }
 
     @Test
@@ -50,6 +56,6 @@ public class FizzBuzzTest {
         List<String> result = fizzBuzz.calculate(givenNumbers);
         String printedOutput = fizzBuzz.printInConsole(result);
 
-        assertThat(printedOutput).isEqualTo(String.join("",expectedNumbers));
+        assertThat(printedOutput).isEqualTo(String.join("", expectedNumbers));
     }
 }
