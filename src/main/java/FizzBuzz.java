@@ -1,5 +1,6 @@
 public class FizzBuzz {
     public String checkEquivalent(int givenNumber) {
+        if (isFizz(givenNumber) && isBuzz(givenNumber)) return "FizzBuzz";
         if (isFizz(givenNumber)) return "Fizz";
         if (isBuzz(givenNumber)) return "Buzz";
         return Integer.toString(givenNumber);
