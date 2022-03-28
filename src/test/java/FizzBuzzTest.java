@@ -39,4 +39,14 @@ public class FizzBuzzTest {
 
         assertThat(fizzBuzz.calculate(givenNumbers)).isEqualTo(expectedNumbers);
     }
+
+    @Test
+    void given_list_numbers_get_fizzbuzz_on_multiples_of_three_and_five() {
+        fizzBuzz = new FizzBuzz();
+        List<String> givenNumbers = List.of("1", "2","3", "5","15");
+        List<String> expectedNumbers = List.of("1", "2","Fizz", "Buzz", "FizzBuzz");
+
+
+        assertThat(fizzBuzz.calculate(givenNumbers)).isEqualTo(expectedNumbers);
+    }
 }
