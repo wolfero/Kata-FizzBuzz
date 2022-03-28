@@ -50,6 +50,6 @@ public class FizzBuzzTest {
         List<String> result = fizzBuzz.calculate(givenNumbers);
         String printedOutput = fizzBuzz.printInConsole(result);
 
-        assertThat(printedOutput).isEqualTo(expectedNumbers);
+        assertThat(printedOutput).isEqualTo(String.join("",expectedNumbers));
     }
 }
