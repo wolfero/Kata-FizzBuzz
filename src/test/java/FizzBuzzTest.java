@@ -32,7 +32,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void given_multiple_of_three_and_five_return_fizzbuzz(){
+    void given_multiple_of_three_and_five_return_fizzbuzz() {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
         String result = fizzBuzz.checkEquivalent(15);

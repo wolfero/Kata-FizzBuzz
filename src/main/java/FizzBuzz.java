@@ -1,6 +1,6 @@
 public class FizzBuzz {
     public String checkEquivalent(int givenNumber) {
-        if (isFizz(givenNumber) && isBuzz(givenNumber)) return "FizzBuzz";
+        if (isFizzBuzz(givenNumber)) return "FizzBuzz";
         if (isFizz(givenNumber)) return "Fizz";
         if (isBuzz(givenNumber)) return "Buzz";
         return Integer.toString(givenNumber);
@@ -12,5 +12,9 @@ public class FizzBuzz {
 
     private boolean isFizz(int givenNumber) {
         return givenNumber % 3 == 0;
+    }
+
+    private boolean isFizzBuzz(int givenNumber) {
+        return isFizz(givenNumber) && isBuzz(givenNumber);
     }
 }
