@@ -11,4 +11,13 @@ public class FizzBuzzTest {
 
         assertThat(result).isEqualTo("1");
     }
+
+    @Test
+    void given_multiple_of_three_return_fizz(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String result = fizzBuzz.checkEquivalent(3);
+
+        assertThat(result).isEqualTo("Fizz");
+    }
 }
