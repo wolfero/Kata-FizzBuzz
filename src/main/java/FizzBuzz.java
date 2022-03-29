@@ -8,12 +8,12 @@ public class FizzBuzz {
 
     public String checkEquivalent() {
         if (isFizzBuzz()) return text;
-        return new Number(givenNumber).checkEquivalent();
+        return new Number(givenNumber).numberToString();
     }
 
     public boolean isFizzBuzz() {
-        Fizz fizz=new Fizz(givenNumber);
-        Buzz buzz=new Buzz(givenNumber);
+        Fizz fizz = new Fizz(givenNumber);
+        Buzz buzz = new Buzz(givenNumber);
         return (fizz.isFizz()) && (buzz.isBuzz());
     }
 

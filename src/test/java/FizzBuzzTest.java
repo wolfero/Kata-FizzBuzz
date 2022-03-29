@@ -7,7 +7,7 @@ public class FizzBuzzTest {
     void given_number_return_number_in_string_format() {
         Number number = new Number(1);
 
-        String result = number.checkEquivalent();
+        String result = number.numberToString();
 
         assertThat(result).isEqualTo("1");
     }
@@ -31,7 +31,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void given_multiple_of_three_and_five_return_fizzbuzz(){
+    void given_multiple_of_three_and_five_return_fizzbuzz() {
         FizzBuzz fizzBuzz = new FizzBuzz(15);
 
         String result = fizzBuzz.checkEquivalent();
@@ -40,7 +40,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void given_one_hundred_numbers_return_equivalent(){
+    void given_one_hundred_numbers_return_equivalent() {
         for (int number = 1; number <= 100; number++) {
 
             String result = selectCorrectObject(number);
@@ -49,26 +49,26 @@ public class FizzBuzzTest {
         }
     }
 
-    private String equalizingText(int givenNumber){
-        FizzBuzz fizzBuzz=new FizzBuzz(givenNumber);
-        Fizz fizz=new Fizz(givenNumber);
-        Buzz buzz=new Buzz(givenNumber);
+    private String equalizingText(int givenNumber) {
+        FizzBuzz fizzBuzz = new FizzBuzz(givenNumber);
+        Fizz fizz = new Fizz(givenNumber);
+        Buzz buzz = new Buzz(givenNumber);
 
-        if(fizzBuzz.isFizzBuzz())return fizzBuzz.getText();
+        if (fizzBuzz.isFizzBuzz()) return fizzBuzz.getText();
         if (fizz.isFizz()) return fizz.getText();
-        if(buzz.isBuzz())return buzz.getText();
+        if (buzz.isBuzz()) return buzz.getText();
         return Integer.toString(givenNumber);
     }
 
 
-    private String selectCorrectObject(int givenNumber){
-        FizzBuzz fizzBuzz=new FizzBuzz(givenNumber);
-        Fizz fizz=new Fizz(givenNumber);
-        Buzz buzz=new Buzz(givenNumber);
+    private String selectCorrectObject(int givenNumber) {
+        FizzBuzz fizzBuzz = new FizzBuzz(givenNumber);
+        Fizz fizz = new Fizz(givenNumber);
+        Buzz buzz = new Buzz(givenNumber);
 
         if (fizzBuzz.isFizzBuzz()) return fizzBuzz.checkEquivalent();
-        if(fizz.isFizz())return fizz.checkEquivalent();
-        if(buzz.isBuzz())return buzz.checkEquivalent();
-        return new Number(givenNumber).checkEquivalent();
+        if (fizz.isFizz()) return fizz.checkEquivalent();
+        if (buzz.isBuzz()) return buzz.checkEquivalent();
+        return new Number(givenNumber).numberToString();
     }
 }

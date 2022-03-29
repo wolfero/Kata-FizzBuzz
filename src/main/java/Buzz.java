@@ -8,7 +8,7 @@ public class Buzz {
 
     public String checkEquivalent() {
         if (isBuzz()) return text;
-        return new Number(givenNumber).checkEquivalent();
+        return new Number(givenNumber).numberToString();
     }
 
     public boolean isBuzz() {

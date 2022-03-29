@@ -8,7 +8,7 @@ public class Fizz {
 
     public String checkEquivalent() {
         if (isFizz()) return text;
-        return new Number(givenNumber).checkEquivalent();
+        return new Number(givenNumber).numberToString();
     }
 
     public boolean isFizz() {

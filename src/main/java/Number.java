@@ -5,7 +5,7 @@ public class Number {
         this.givenNumber = givenNumber;
     }
 
-    public String checkEquivalent() {
+    public String numberToString() {
         return Integer.toString(givenNumber);
     }
 }
