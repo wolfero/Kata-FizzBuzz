@@ -32,9 +32,9 @@ public class FizzBuzzTest {
 
     @Test
     void given_multiple_of_three_and_five_return_fizzbuzz(){
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        FizzBuzz fizzBuzz = new FizzBuzz(15);
 
-        String result = fizzBuzz.checkEquivalent(15);
+        String result = fizzBuzz.checkEquivalent();
 
         assertThat(result).isEqualTo("FizzBuzz");
     }
