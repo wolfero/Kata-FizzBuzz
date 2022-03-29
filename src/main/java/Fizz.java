@@ -14,4 +14,8 @@ public class Fizz {
     public boolean isFizz() {
         return givenNumber % 3 == 0;
     }
+
+    public String getText() {
+        return text;
+    }
 }

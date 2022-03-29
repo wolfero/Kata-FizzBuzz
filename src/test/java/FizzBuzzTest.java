@@ -50,28 +50,25 @@ public class FizzBuzzTest {
     }
 
     private String equalizingText(int givenNumber){
-        final String Fizz="Fizz";
-        final String Buzz="Buzz";
-        final String FizBuzz="FizzBuzz";
-        boolean isFizz = givenNumber % 3 == 0;
-        boolean isBuzz = givenNumber % 5 == 0;
-        boolean isFizzBuzz = isFizz && isBuzz;
+        FizzBuzz fizzBuzz=new FizzBuzz(givenNumber);
+        Fizz fizz=new Fizz(givenNumber);
+        Buzz buzz=new Buzz(givenNumber);
 
-        if (isFizzBuzz) return FizBuzz;
-        if(isFizz)return Fizz;
-        if(isBuzz)return Buzz;
+        if(fizzBuzz.isFizzBuzz())return fizzBuzz.getText();
+        if (fizz.isFizz()) return fizz.getText();
+        if(buzz.isBuzz())return buzz.getText();
         return Integer.toString(givenNumber);
     }
 
 
     private String selectCorrectObject(int givenNumber){
-        boolean isFizz = givenNumber % 3 == 0;
-        boolean isBuzz = givenNumber % 5 == 0;
-        boolean isFizzBuzz = isFizz && isBuzz;
+        FizzBuzz fizzBuzz=new FizzBuzz(givenNumber);
+        Fizz fizz=new Fizz(givenNumber);
+        Buzz buzz=new Buzz(givenNumber);
 
-        if (isFizzBuzz) return new FizzBuzz(givenNumber).checkEquivalent();
-        if(isFizz)return new Fizz(givenNumber).checkEquivalent();
-        if(isBuzz)return new Buzz(givenNumber).checkEquivalent();
+        if (fizzBuzz.isFizzBuzz()) return fizzBuzz.checkEquivalent();
+        if(fizz.isFizz())return fizz.checkEquivalent();
+        if(buzz.isBuzz())return buzz.checkEquivalent();
         return new Number(givenNumber).checkEquivalent();
     }
 }

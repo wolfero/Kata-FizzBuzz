@@ -14,4 +14,8 @@ public class Buzz {
     public boolean isBuzz() {
         return givenNumber % 5 == 0;
     }
+
+    public String getText() {
+        return text;
+    }
 }

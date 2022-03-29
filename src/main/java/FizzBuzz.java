@@ -11,9 +11,13 @@ public class FizzBuzz {
         return new Number(givenNumber).checkEquivalent();
     }
 
-    private boolean isFizzBuzz() {
+    public boolean isFizzBuzz() {
         Fizz fizz=new Fizz(givenNumber);
         Buzz buzz=new Buzz(givenNumber);
         return (fizz.isFizz()) && (buzz.isBuzz());
+    }
+
+    public String getText() {
+        return text;
     }
 }
