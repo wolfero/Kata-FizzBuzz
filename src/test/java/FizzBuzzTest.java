@@ -23,9 +23,9 @@ public class FizzBuzzTest {
 
     @Test
     void given_multiple_of_five_return_buzz(){
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        Buzz buzz = new Buzz(5);
 
-        String result = fizzBuzz.checkEquivalent(5);
+        String result = buzz.checkEquivalent();
 
         assertThat(result).isEqualTo("Buzz");
     }
