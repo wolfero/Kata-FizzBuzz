@@ -20,4 +20,13 @@ public class FizzBuzzTest {
 
         assertThat(result).isEqualTo("Fizz");
     }
+
+    @Test
+    void given_multiple_of_five_return_buzz(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String result = fizzBuzz.checkEquivalent(5);
+
+        assertThat(result).isEqualTo("Buzz");
+    }
 }
