@@ -11,7 +11,7 @@ public class Fizz {
         return new Number(givenNumber).checkEquivalent();
     }
 
-    private boolean isFizz() {
+    public boolean isFizz() {
         return givenNumber % 3 == 0;
     }
 }

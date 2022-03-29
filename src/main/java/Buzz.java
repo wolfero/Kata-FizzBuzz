@@ -11,7 +11,7 @@ public class Buzz {
         return new Number(givenNumber).checkEquivalent();
     }
 
-    private boolean isBuzz() {
+    public boolean isBuzz() {
         return givenNumber % 5 == 0;
     }
 }

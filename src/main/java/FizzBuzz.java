@@ -1,5 +1,5 @@
 public class FizzBuzz {
-    private final String text="FizzBuzz";
+    private final String text = "FizzBuzz";
     private final int givenNumber;
 
     public FizzBuzz(int givenNumber) {
@@ -7,7 +7,13 @@ public class FizzBuzz {
     }
 
     public String checkEquivalent() {
-        if((givenNumber%3==0)&&(givenNumber%5==0))return text;
+        if (isFizzBuzz()) return text;
         return new Number(givenNumber).checkEquivalent();
+    }
+
+    private boolean isFizzBuzz() {
+        Fizz fizz=new Fizz(givenNumber);
+        Buzz buzz=new Buzz(givenNumber);
+        return (fizz.isFizz()) && (buzz.isBuzz());
     }
 }
