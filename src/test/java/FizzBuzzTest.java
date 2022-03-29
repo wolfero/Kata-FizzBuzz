@@ -42,11 +42,36 @@ public class FizzBuzzTest {
     @Test
     void given_one_hundred_numbers_return_equivalent(){
         for (int number = 1; number <= 100; number++) {
-            FizzBuzz fizzBuzz = new FizzBuzz(number);
 
-            String result = fizzBuzz.checkEquivalent();
+            String result = selectCorrectObject(number);
 
-            assertThat(result).isEqualTo("FizzBuzz");
+            assertThat(result).isEqualTo(equalizingText(number));
         }
+    }
+
+    private String equalizingText(int givenNumber){
+        final String Fizz="Fizz";
+        final String Buzz="Buzz";
+        final String FizBuzz="FizzBuzz";
+        boolean isFizz = givenNumber % 3 == 0;
+        boolean isBuzz = givenNumber % 5 == 0;
+        boolean isFizzBuzz = isFizz && isBuzz;
+
+        if (isFizzBuzz) return FizBuzz;
+        if(isFizz)return Fizz;
+        if(isBuzz)return Buzz;
+        return Integer.toString(givenNumber);
+    }
+
+
+    private String selectCorrectObject(int givenNumber){
+        boolean isFizz = givenNumber % 3 == 0;
+        boolean isBuzz = givenNumber % 5 == 0;
+        boolean isFizzBuzz = isFizz && isBuzz;
+
+        if (isFizzBuzz) return new FizzBuzz(givenNumber).checkEquivalent();
+        if(isFizz)return new Fizz(givenNumber).checkEquivalent();
+        if(isBuzz)return new Buzz(givenNumber).checkEquivalent();
+        return new Number(givenNumber).checkEquivalent();
     }
 }
