@@ -14,9 +14,9 @@ public class FizzBuzzTest {
 
     @Test
     void given_multiple_of_three_return_fizz(){
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        Fizz fizz = new Fizz(3);
 
-        String result = fizzBuzz.checkEquivalent(3);
+        String result = fizz.checkEquivalent();
 
         assertThat(result).isEqualTo("Fizz");
     }
