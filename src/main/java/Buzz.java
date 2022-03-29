@@ -1,5 +1,5 @@
 public class Buzz {
-    private final String text="Buzz";
+    private final String text = "Buzz";
     private final int givenNumber;
 
     public Buzz(int givenNumber) {
@@ -7,7 +7,11 @@ public class Buzz {
     }
 
     public String checkEquivalent() {
-        if(givenNumber%5==0)return text;
+        if (isBuzz()) return text;
         return new Number(givenNumber).checkEquivalent();
+    }
+
+    private boolean isBuzz() {
+        return givenNumber % 5 == 0;
     }
 }

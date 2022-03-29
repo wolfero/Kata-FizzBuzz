@@ -13,7 +13,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void given_multiple_of_three_return_fizz(){
+    void given_multiple_of_three_return_fizz() {
         Fizz fizz = new Fizz(3);
 
         String result = fizz.checkEquivalent();
@@ -22,7 +22,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void given_multiple_of_five_return_buzz(){
+    void given_multiple_of_five_return_buzz() {
         Buzz buzz = new Buzz(5);
 
         String result = buzz.checkEquivalent();
